@@ -15,7 +15,6 @@ datasource db {
 
 model users {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
-  v     Int    @map("__v")
   name  String
   email String @unique
   password String
@@ -24,7 +23,6 @@ model users {
 
 model tasks {
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  v Int @map("__v")
   tittle String
   description String
   createdAt DateTime @default(now())
