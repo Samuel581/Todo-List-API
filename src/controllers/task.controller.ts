@@ -2,10 +2,10 @@ import { Request, Response } from "express";
 import { createTask } from "../services/task.service";
 import { CustomRequest } from "../types/express";
 
-export const createTaskController = async (req: CustomRequest, res: Response) => {
+export const createTaskController = async (req: Request, res: Response) => {
     try {
-        const { tittle, description } = req.body;
-        const userId = req.user?.userId;
+        console.log(req.body);
+        const { tittle, description, userId} = req.body;
 
         if (!userId) {
             res.status(401).json({ message: "Unauthorized" });
