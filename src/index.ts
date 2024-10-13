@@ -1,11 +1,14 @@
 import express, { Request, Response } from 'express';
 import dotnenv from 'dotenv';
+import mainRouter from './routes/main.route';
 
 dotnenv.config();
 const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
+
+app.use('/api', mainRouter);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Todo List API');
