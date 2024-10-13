@@ -16,3 +16,12 @@ export const createTask = (data: {userId: string, tittle: string, description: s
     return newTask;
 }
 
+export const getTasks = (userId: string) => {
+    const tasks = prisma.tasks.findMany({
+        where: {
+            userId
+        }
+    })
+    return tasks;
+}
+
