@@ -15,6 +15,10 @@ const swaggerOptions: Options = {
                 url:'http://localhost:3000/api',
                 description: 'Local server'
             },
+            {
+              url: 'https://todo-list-api-seven-flax.vercel.app',
+              description: 'Vercel server',
+            },
         ],
         components: {
             securitySchemes: {
