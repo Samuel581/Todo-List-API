@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import mainRouter from '../src/routes/main.route';
 import { setupSwagger } from '../src/swagger/swagger';
 import cors from 'cors';
+import serverless from 'serverless-http';
 
 const app = express();
 
@@ -21,4 +22,5 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // Export the app (no app.listen())
-export default app;
+module.exports = app;
+module.exports.handler = serverless(app);
