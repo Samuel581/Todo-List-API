@@ -6,7 +6,10 @@
   "author": "Samuel Ortiz <00023020@uca.edu.sv>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/index.ts"
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "vercel-build": "npm run build",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
