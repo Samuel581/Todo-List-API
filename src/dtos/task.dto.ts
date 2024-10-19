@@ -6,7 +6,7 @@ export class createTaskDTO {
     @Length(5, 50)
     tittle: string
     
-    @Length(50, 500)
+    @Length(20, 500)
     @IsString()
     @IsNotEmpty()
     description: string
