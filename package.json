@@ -10,7 +10,7 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
     "start": "node dist/api/index.js",
-    "vercel-build": "npm run build",
+    "vercel-build": "echo hello",
     "postinstall": "prisma generate"
   },
   "dependencies": {
