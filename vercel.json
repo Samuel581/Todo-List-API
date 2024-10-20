@@ -7,9 +7,7 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.ts"
-    }
+    {"src": "/(.*)", "dest": "/api/index.ts"},
+    {"src": "/api-docs", "dest": "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/$1"}
   ]
 }
