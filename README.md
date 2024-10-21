@@ -14,3 +14,6 @@ This is a challenge from [roadmap.sh](https://roadmap.sh) to create a simple Tod
 - Node.js 14.x>
 - Docker
 - MongoDB (Atlas is recommended)
+
+## Deployment
+- Pending
