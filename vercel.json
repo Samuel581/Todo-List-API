@@ -1,13 +1,8 @@
 {
-  "version": 2,
   "builds": [
-    {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
-    }
+    { "src": "dist/api/index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    {"src": "/(.*)", "dest": "/api/index.ts"},
-    {"src": "/api-docs", "dest": "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.1.0/$1"}
+    { "src": "/(.*)", "dest": "dist/api/index.js" }
   ]
 }

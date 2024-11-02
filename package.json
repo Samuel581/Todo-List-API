@@ -7,11 +7,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn src/index.ts",
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc",
+    "prisma:generate": "prisma generate",
+    "build": "npm run prisma:generate && tsc",
     "start": "node dist/api/index.js",
-    "vercel-build": "echo hello",
-    "postinstall": "prisma generate"
+    "vercel-build": "echo hello"
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
