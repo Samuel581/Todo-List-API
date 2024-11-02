@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import dotnenv from 'dotenv';
-import mainRouter from './routes/main.route';
-import { setupSwagger } from './swagger/swagger';
+import mainRouter from '../routes/main.route';
+import { setupSwagger } from '../swagger/swagger';
 
 dotnenv.config();
 const app = express();

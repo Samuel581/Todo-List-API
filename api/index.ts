@@ -1,2 +1,2 @@
-import app from "../src";
+import app from "../src/api";
 export default app;
